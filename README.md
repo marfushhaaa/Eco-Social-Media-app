@@ -1,2 +1,2 @@
-# Eco-Social-Media-app-
+# Eco-Social-Media-app
 An app for ecological challenges
