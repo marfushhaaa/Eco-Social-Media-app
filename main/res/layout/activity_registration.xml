@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_registration"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration"
+    android:background="@color/white">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1"
+        android:layout_above="@+id/sr">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--*******create account**********-->
+            <TextView
+                android:id="@+id/txtcreate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/font2"
+                android:gravity="center_horizontal"
+                android:text="Створити акаунт"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:textStyle="normal" />
+
+            <!--*******Full Name**********-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Fullname"
+                android:layout_marginTop="15dp"
+                android:textColorHint="@color/black"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:layout_below="@id/txtcreate">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="FullName"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--*******Username**********-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Username"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/Fullname">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--*******Email**********-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_email"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/Username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--*******mobile number**********-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linear1"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/signup_email"
+                android:weightSum="100">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/countrycode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </com.hbb20.CountryCodePicker>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobilenoo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/black"
+                    android:layout_weight="80">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="063 XX XXX XX"
+                        android:inputType="number"
+                        android:textColor="@color/statusbarcolo" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--*******password**********-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_password"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                app:passwordToggleEnabled="true"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/linear1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--*******gender**********-->
+
+            <!--*******birt date text**********-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <TextView
+                    android:id="@+id/txtbirth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="40"
+                    android:text="Birth date"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/birthdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="60"
+                    android:drawableLeft="@drawable/ic_birth"
+                    android:drawablePadding="10dp"
+                    android:hint="Select Date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black" />
+
+            </LinearLayout>
+
+
+            <!--*******birth date picker**********-->
+<!--            <DatePicker-->
+<!--                android:id="@+id/birthdate"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:calendarViewShown="false"-->
+<!--                android:datePickerMode="spinner"-->
+<!--                android:spinnersShown="true"-->
+<!--                android:layout_marginStart="20dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_below="@id/txtbirth"/>-->
+
+            <!--*******bio**********-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bio"
+                android:layout_marginTop="12dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:textColorHint="@color/black"
+                android:layout_below="@id/signup_password">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Bio(Optional)"
+                    android:inputType="text"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <!--*******log in**********-->
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/website"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/blue_button"
+                android:text="Створити"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20pt"
+                android:fontFamily="@font/font2"
+                android:text="Увійти або створити команду"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edit_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_txt_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="hint" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/free_teams_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/font2"
+                    android:text="Відкриті команди:"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/free_teams_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/free_teams_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/font2"
+                            android:textColor="#000000" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="154dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="20dp"
+                android:text="Оновити"
+                android:textColor="#33591F" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!--*******line**********-->
+    <TableRow
+        android:id="@+id/sr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/textcolor"
+        android:layout_above="@+id/AlreadyHavesignin"/>
+
+    <!--*******have account**********-->
+    <TextView
+        android:id="@+id/AlreadyHavesignin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:text="Вже є акаунт? Увійдіть."
+        android:textColor="@color/dark_purple"
+        android:textSize="16sp" />
+
+
+
+
+</RelativeLayout>
